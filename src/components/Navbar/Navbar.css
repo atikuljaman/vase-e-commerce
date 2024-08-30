@@ -1,0 +1,111 @@
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 999;
+}
+
+/* Logo container */
+.navbar-container .logo {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-container .logo a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black; /* Adjust as needed */
+}
+
+/* Logo text hover animation */
+.navbar-container .logo span {
+  display: block;
+  position: relative;
+}
+
+.navbar-container .logo span:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar-container .logo span:last-child {
+  transform: translateY(120%);
+}
+
+.navbar-container .logo h2 {
+  font-size: 16px;
+  line-height: 130%;
+  cursor: pointer;
+}
+
+.navbar-container .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.navbar-container ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 5px;
+}
+
+.navbar-container ul a {
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+/* Border hover animation */
+.navbar-container ul a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  will-change: transform;
+  transform-origin: 100% 100%;
+  transform: scaleX(0);
+  pointer-events: none;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: 0.5s;
+  display: none;
+}
+
+.navbar-container ul a:hover::before {
+  transform-origin: 0 0;
+  transform: scaleX(1);
+}
+
+.nav-text {
+  display: block;
+}
+
+.nav-hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-hover {
+  transform: translateY(120%);
+}
+
+.navbar-container .cart-btn {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
