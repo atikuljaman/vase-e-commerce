@@ -1,12 +1,61 @@
+import { useEffect, useRef } from "react";
 import { BsBag } from "react-icons/bs";
-import { useEffect } from "react";
 import gsap from "gsap";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     const links = document.querySelectorAll(".nav-right ul li a");
     const logo = document.querySelector(".logo a");
+    const btn = document.querySelector(".cart-btn");
+
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      logo,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        duration: 1,
+        y: 0,
+        opacity: 1,
+        ease: "power4.out",
+        stagger: 0.15,
+      }
+    );
+
+    tl.fromTo(
+      links,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      {
+        duration: 1,
+        y: 0,
+        opacity: 1,
+        ease: "power4.out",
+        stagger: 0.15,
+      }
+    );
+    tl.fromTo(
+      btn,
+      {
+        opacity: 0,
+        // scale: 0,
+      },
+      {
+        duration: 1,
+        // scale: 1,
+        opacity: 1,
+        ease: "power4.out",
+        stagger: 0.15,
+      }
+    );
 
     links.forEach((link) => {
       const text = link.querySelector(".nav-text");
@@ -39,7 +88,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="container navbar-container">
+    <div className="container navbar-container" ref={containerRef}>
       <div className="logo">
         <a href="">
           <span>

@@ -7,15 +7,16 @@
 
 .hero-container .banner-heading {
   position: relative;
-  /* pointer-events: none; */
+  /* overflow: hidden; */
 }
 
 .hero-container .banner-img-wrapper {
   width: 350px;
+  width: 280px;
   height: 400px;
+  height: 300px;
   border-radius: 20px;
   position: absolute;
-  /* top: 0; */
   overflow: hidden;
   opacity: 0;
 }
@@ -34,6 +35,7 @@
   pointer-events: none;
   white-space: nowrap;
   display: inline-block;
+  pointer-events: none;
 }
 
 .hero-container .banner-heading:hover h1 {

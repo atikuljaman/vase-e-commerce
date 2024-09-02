@@ -1,0 +1,147 @@
+.footer-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding-top: 50px;
+  border-top: 1px solid #ccc;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-newsletter,
+.footer-social {
+  margin-bottom: 30px;
+}
+
+.footer-about h3,
+.footer-links h4,
+.footer-contact h4,
+.footer-newsletter h4,
+.footer-social h4 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  line-height: 130%;
+  font-weight: 700;
+}
+
+.footer-about p,
+.footer-links ul,
+.footer-contact p,
+.footer-newsletter p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-links ul li a:hover {
+  color: #555; /* Slightly darker shade */
+}
+
+.footer-newsletter form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.footer-newsletter button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.footer-social ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* .footer-social ul li {
+  margin-right: 15px;
+} */
+
+.footer-social ul li a {
+  /* color: #333; */
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  opacity: 0.8;
+}
+
+.footer-social ul li a:hover {
+  color: #555;
+}
+
+.big-logo {
+  height: 300px;
+  overflow: hidden;
+}
+
+.big-logo .marquee-footer {
+  overflow: hidden;
+}
+
+.big-logo h2 {
+  font-size: 19vw;
+  font-weight: 700;
+  line-height: 130%;
+  text-wrap: nowrap;
+  margin-top: 30px;
+}
+
+.footer-legal {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: black;
+  color: white;
+  padding: 30px 20px; */
+}
+
+.footer-legal p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-legal button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}

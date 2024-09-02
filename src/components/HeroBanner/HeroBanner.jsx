@@ -1,12 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import SplitType from "split-type";
 import img_1 from "../../assets/images/img-1.jpg";
 import img_2 from "../../assets/images/img-2.jpg";
 import img_3 from "../../assets/images/img-3.jpg";
 import img_4 from "../../assets/images/img-4.jpg";
 import "./HeroBanner.css";
-import gsap from "gsap";
 
 const HeroBanner = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const headingText = new SplitType(
+      containerRef.current.querySelectorAll("h1")
+    );
+
+    headingText.lines.forEach((line) => {
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("text-wrapper");
+      line.parentNode.insertBefore(wrapper, line);
+      wrapper.appendChild(line);
+    });
+
+    gsap.from(headingText.lines, {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      skewY: 10,
+      transformOrigin: "0% 100%",
+      stagger: 0.15,
+      delay: 2,
+    });
+  }, []);
+
   useEffect(() => {
     const bannerHeadings = document.querySelectorAll(".banner-heading");
 
@@ -64,7 +91,7 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <div className="container hero-container">
+    <div className="container hero-container" ref={containerRef}>
       <div>
         <div className="banner-heading">
           <div className="banner-img-wrapper">

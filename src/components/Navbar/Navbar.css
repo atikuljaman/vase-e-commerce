@@ -55,6 +55,10 @@
   margin-top: 5px;
 }
 
+.navbar-container ul li {
+  overflow: hidden;
+}
+
 .navbar-container ul a {
   font-weight: 600;
   position: relative;
