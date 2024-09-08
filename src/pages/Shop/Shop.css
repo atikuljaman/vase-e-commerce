@@ -1,0 +1,144 @@
+.shop-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 30px;
+}
+
+.shop-container .filter-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  position: sticky;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shop-container .filter-container h2 {
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+}
+
+.shop-container .filter-container .filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shop-container .filter-container .filter-group h3 {
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.shop-container .filter-container .filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Hide the default checkbox */
+.filter-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.filter-container input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Checkbox appearance */
+.filter-container input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Checkbox checked state */
+.filter-container input[type="checkbox"]:checked + label:before {
+  background-color: black;
+  border-color: black;
+}
+
+.filter-container input[type="checkbox"]:checked + label:after {
+  content: "\2714";
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  color: white;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.shop-container .products-container {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.shop-container .products-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  border: none;
+  background-color: white;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button.prev,
+.pagination button.next {
+  background-color: black;
+  color: #fff;
+  font-weight: 600;
+}
+
+.pagination button.page-number {
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+}
+
+.pagination button.page-number.active {
+  background-color: black;
+  color: #fff;
+}

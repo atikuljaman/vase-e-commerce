@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
-import { HomePage } from "./pages";
+import { HomePage, ShopPage } from "./pages";
 
 function App() {
   const lenisRef = useRef(null);
@@ -34,7 +34,8 @@ function App() {
 
   return (
     <>
-      <HomePage />
+      {/* <HomePage /> */}
+      <ShopPage />
     </>
   );
 }

@@ -1,0 +1,415 @@
+[
+  {
+      "id": 1,
+      "name": "Elysian Vase",
+      "desc": "A minimalist vase that embodies serenity with its smooth curves and understated elegance.",
+      "currPrice": 49.99,
+      "prevPrice": 59.99,
+      "reviews": 4.8,
+      "img": "/assets/images/img-1.jpg",
+      "imgGallery": ["/assets/images/img-1.jpg", "/assets/images/img-2.jpg", "/assets/images/img-3.jpg"],
+      "material": "Ceramic",
+      "color": "White",
+      "size": "Medium",
+      "style": "Minimalist",
+      "shape": "Round",
+      "availability": "InStock",
+      "specifications": {
+          "Material": "Ceramic",
+          "Color": "White",
+          "Size": "Medium",
+          "Style": "Minimalist",
+          "Shape": "Round",
+          "Availability": "In Stock"
+      },
+      "customerReviews": [
+          {"name": "Alice M.", "comment": "Beautiful design, perfect for my decor!", "rating": 5},
+          {"name": "Bob L.", "comment": "High quality and fast shipping.", "rating": 4},
+          {"name": "Cathy P.", "comment": "Exactly as described, very satisfied.", "rating": 5}
+      ],
+      "relatedProducts": [
+          {"id": 3, "name": "Aurora Vase", "img": "/assets/images/img-3.jpg", "currPrice": 45.00, "prevPrice": 55.00, "reviews": 4.7},
+          {"id": 7, "name": "Nimbus Vase", "img": "/assets/images/img-7.jpg", "currPrice": 50.00, "prevPrice": 60.00, "reviews": 4.9},
+          {"id": 8, "name": "Cascade Vase", "img": "/assets/images/img-8.jpg", "currPrice": 46.50, "prevPrice": 56.50, "reviews": 4.6}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 2,
+      "name": "Zenith Vase",
+      "desc": "Crafted with precision, this vase is perfect for adding a touch of modernity to any space.",
+      "currPrice": 39.99,
+      "prevPrice": 49.99,
+      "reviews": 4.6,
+      "img": "/assets/images/img-2.jpg",
+      "imgGallery": ["/assets/images/img-2.jpg", "/assets/images/img-4.jpg", "/assets/images/img-6.jpg"],
+      "material": "Porcelain",
+      "color": "Black",
+      "size": "Medium",
+      "style": "Modern",
+      "shape": "Cylindrical",
+      "availability": "InStock",
+      "specifications": {
+          "Material": "Porcelain",
+          "Color": "Black",
+          "Size": "Medium",
+          "Style": "Modern",
+          "Shape": "Cylindrical",
+          "Availability": "In Stock"
+      },
+      "customerReviews": [
+          {"name": "Danielle K.", "comment": "Looks great on my dining table.", "rating": 5},
+          {"name": "Eli W.", "comment": "Modern and stylish, but smaller than expected.", "rating": 4}
+      ],
+      "relatedProducts": [
+          {"id": 4, "name": "Luna Vase", "img": "/assets/images/img-4.jpg", "currPrice": 52.00, "prevPrice": 62.00, "reviews": 4.7},
+          {"id": 6, "name": "Eclipse Vase", "img": "/assets/images/img-6.jpg", "currPrice": 44.99, "prevPrice": 54.99, "reviews": 4.4},
+          {"id": 10, "name": "Serene Vase", "img": "/assets/images/img-10.jpg", "currPrice": 47.99, "prevPrice": 57.99, "reviews": 4.6}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 3,
+      "name": "Aurora Vase",
+      "desc": "A sleek and simple design, ideal for showcasing your favorite flowers in style.",
+      "currPrice": 45.00,
+      "prevPrice": 55.00,
+      "reviews": 4.7,
+      "img": "/assets/images/img-3.jpg",
+      "imgGallery": ["/assets/images/img-3.jpg", "/assets/images/img-5.jpg", "/assets/images/img-7.jpg"],
+      "material": "Glass",
+      "color": "Blue",
+      "size": "Small",
+      "style": "Minimalist",
+      "shape": "Square",
+      "availability": "InStock",
+      "specifications": {
+          "Material": "Glass",
+          "Color": "Blue",
+          "Size": "Small",
+          "Style": "Minimalist",
+          "Shape": "Square",
+          "Availability": "In Stock"
+      },
+      "customerReviews": [
+          {"name": "Fiona R.", "comment": "Beautiful, simple vase. Love the color!", "rating": 5},
+          {"name": "George H.", "comment": "Elegant and well-made.", "rating": 5},
+          {"name": "Hannah S.", "comment": "The perfect accent piece.", "rating": 4}
+      ],
+      "relatedProducts": [
+          {"id": 1, "name": "Elysian Vase", "img": "/assets/images/img-1.jpg", "currPrice": 49.99, "prevPrice": 59.99, "reviews": 4.8},
+          {"id": 9, "name": "Nova Vase", "img": "/assets/images/img-9.jpg", "currPrice": 42.00, "prevPrice": 52.00, "reviews": 4.5},
+          {"id": 8, "name": "Cascade Vase", "img": "/assets/images/img-8.jpg", "currPrice": 46.50, "prevPrice": 56.50, "reviews": 4.7}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 4,
+      "name": "Luna Vase",
+      "desc": "A ceramic masterpiece with a matte finish that brings a tranquil vibe to any room.",
+      "currPrice": 52.00,
+      "prevPrice": 62.00,
+      "reviews": 4.9,
+      "img": "/assets/images/img-4.jpg",
+      "imgGallery": ["/assets/images/img-4.jpg", "/assets/images/img-5.jpg", "/assets/images/img-6.jpg"],
+      "material": "Ceramic",
+      "color": "White",
+      "size": "Large",
+      "style": "Modern",
+      "shape": "Oval",
+      "availability": "PreOrder",
+      "specifications": {
+          "Material": "Ceramic",
+          "Color": "White",
+          "Size": "Large",
+          "Style": "Modern",
+          "Shape": "Oval",
+          "Availability": "Pre-Order"
+      },
+      "customerReviews": [
+          {"name": "Irene T.", "comment": "Absolutely stunning piece, worth the wait.", "rating": 5},
+          {"name": "Jack P.", "comment": "Quality is excellent, highly recommend.", "rating": 5},
+          {"name": "Karen V.", "comment": "Love the finish, fits perfectly in my space.", "rating": 5}
+      ],
+      "relatedProducts": [
+          {"id": 2, "name": "Zenith Vase", "img": "/assets/images/img-2.jpg", "currPrice": 39.99, "prevPrice": 49.99, "reviews": 4.8},
+          {"id": 6, "name": "Eclipse Vase", "img": "/assets/images/img-6.jpg", "currPrice": 44.99, "prevPrice": 54.99, "reviews": 4.7},
+          {"id": 9, "name": "Nova Vase", "img": "/assets/images/img-9.jpg", "currPrice": 42.00, "prevPrice": 52.00, "reviews": 4.9}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 5,
+      "name": "Solstice Vase",
+      "desc": "An elegant and versatile piece, perfect for both traditional and contemporary decor.",
+      "currPrice": 48.50,
+      "prevPrice": 58.50,
+      "reviews": 4.5,
+      "img": "/assets/images/img-5.jpg",
+      "imgGallery": ["/assets/images/img-5.jpg", "/assets/images/img-6.jpg", "/assets/images/img-7.jpg"],
+      "material": "Stoneware",
+      "color": "NaturalBeige",
+      "size": "Medium",
+      "style": "Rustic",
+      "shape": "Round",
+      "availability": "OutOfStock",
+      "specifications": {
+          "Material": "Stoneware",
+          "Color": "Natural Beige",
+          "Size": "Medium",
+          "Style": "Rustic",
+          "Shape": "Round",
+          "Availability": "Out of Stock"
+      },
+      "customerReviews": [
+          {"name": "Larry F.", "comment": "The design is beautiful, but I had to wait for restock.", "rating": 4},
+          {"name": "Megan A.", "comment": "Perfect for my rustic-themed living room.", "rating": 5},
+          {"name": "Nancy Z.", "comment": "Great quality, very happy with my purchase.", "rating": 5}
+      ],
+      "relatedProducts": [
+          {"id": 8, "name": "Cascade Vase", "img": "/assets/images/img-8.jpg", "currPrice": 46.50, "prevPrice": 56.50, "reviews": 4.6},
+          {"id": 10, "name": "Serene Vase", "img": "/assets/images/img-10.jpg", "currPrice": 47.99, "prevPrice": 57.99, "reviews": 4.7},
+          {"id": 1, "name": "Elysian Vase", "img": "/assets/images/img-1.jpg", "currPrice": 49.99, "prevPrice": 59.99, "reviews": 4.8}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 6,
+      "name": "Eclipse Vase",
+      "desc": "A stunning vase with a smooth, dark glaze that adds depth and character to your space.",
+      "currPrice": 44.99,
+      "prevPrice": 54.99,
+      "reviews": 4.4,
+      "img": "/assets/images/img-6.jpg",
+      "imgGallery": ["/assets/images/img-6.jpg", "/assets/images/img-7.jpg", "/assets/images/img-8.jpg"],
+      "material": "Porcelain",
+      "color": "Black",
+      "size": "Large",
+      "style": "Vintage",
+      "shape": "Cylindrical",
+      "availability": "InStock",
+      "specifications": {
+          "Material": "Porcelain",
+          "Color": "Black",
+          "Size": "Large",
+          "Style": "Vintage",
+          "Shape": "Cylindrical",
+          "Availability": "In Stock"
+      },
+      "customerReviews": [
+          {"name": "Oliver W.", "comment": "Beautifully crafted, gives a classic touch.", "rating": 4},
+          {"name": "Paula Y.", "comment": "I love the vintage look, but it’s a bit heavy.", "rating": 4},
+          {"name": "Quincy N.", "comment": "Perfect addition to my antique collection.", "rating": 5}
+      ],
+      "relatedProducts": [
+          {"id": 7, "name": "Nimbus Vase", "img": "/assets/images/img-7.jpg", "currPrice": 50.00, "prevPrice": 60.00, "reviews": 4.5},
+          {"id": 2, "name": "Zenith Vase", "img": "/assets/images/img-2.jpg", "currPrice": 39.99, "prevPrice": 49.99, "reviews": 4.6},
+          {"id": 4, "name": "Luna Vase", "img": "/assets/images/img-4.jpg", "currPrice": 52.00, "prevPrice": 62.00, "reviews": 4.7}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 7,
+      "name": "Nimbus Vase",
+      "desc": "An ethereal design that captures the essence of cloud-like lightness and beauty.",
+      "currPrice": 50.00,
+      "prevPrice": 60.00,
+      "reviews": 4.9,
+      "img": "/assets/images/img-7.jpg",
+      "imgGallery": ["/assets/images/img-7.jpg", "/assets/images/img-8.jpg", "/assets/images/img-9.jpg"],
+      "material": "Glass",
+      "color": "Green",
+      "size": "Large",
+      "style": "Contemporary",
+      "shape": "Oval",
+      "availability": "PreOrder",
+      "specifications": {
+          "Material": "Glass",
+          "Color": "Green",
+          "Size": "Large",
+          "Style": "Contemporary",
+          "Shape": "Oval",
+          "Availability": "Pre-Order"
+      },
+      "customerReviews": [
+          {"name": "Rachel D.", "comment": "Gorgeous vase, it’s a centerpiece for sure.", "rating": 5},
+          {"name": "Sam U.", "comment": "The color is vibrant and eye-catching.", "rating": 5},
+          {"name": "Tina V.", "comment": "It was a bit expensive, but worth it.", "rating": 4}
+      ],
+      "relatedProducts": [
+          {"id": 3, "name": "Aurora Vase", "img": "/assets/images/img-3.jpg", "currPrice": 45.00, "prevPrice": 55.00, "reviews": 4.5},
+          {"id": 8, "name": "Cascade Vase", "img": "/assets/images/img-8.jpg", "currPrice": 46.50, "prevPrice": 56.50, "reviews": 4.6},
+          {"id": 6, "name": "Eclipse Vase", "img": "/assets/images/img-6.jpg", "currPrice": 44.99, "prevPrice": 54.99, "reviews": 4.4}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 8,
+      "name": "Cascade Vase",
+      "desc": "This vase combines elegance and simplicity, ideal for adding a subtle touch of nature to your home.",
+      "currPrice": 46.50,
+      "prevPrice": 56.50,
+      "reviews": 4.6,
+      "img": "/assets/images/img-8.jpg",
+      "imgGallery": ["/assets/images/img-8.jpg", "/assets/images/img-9.jpg", "/assets/images/img-10.jpg"],
+      "material": "Ceramic",
+      "color": "NaturalBeige",
+      "size": "Medium",
+      "style": "Minimalist",
+      "shape": "Round",
+      "availability": "InStock",
+      "specifications": {
+          "Material": "Ceramic",
+          "Color": "Natural Beige",
+          "Size": "Medium",
+          "Style": "Minimalist",
+          "Shape": "Round",
+          "Availability": "In Stock"
+      },
+      "customerReviews": [
+          {"name": "Sarah K.", "comment": "Absolutely love the design and quality. Fits perfectly in my living room!", "rating": 5},
+          {"name": "John D.", "comment": "Beautiful vase, though I expected it to be a bit larger.", "rating": 4},
+          {"name": "Emily R.", "comment": "The minimalist style is just what I was looking for. Very pleased!", "rating": 5}
+      ],
+      "relatedProducts": [
+          {"id": 1, "name": "Elysian Vase", "img": "/assets/images/img-1.jpg", "currPrice": 49.99, "prevPrice": 59.99, "reviews": 4.8},
+          {"id": 9, "name": "Nova Vase", "img": "/assets/images/img-9.jpg", "currPrice": 42.00, "prevPrice": 52.00, "reviews": 4.5},
+          {"id": 3, "name": "Aurora Vase", "img": "/assets/images/img-3.jpg", "currPrice": 45.00, "prevPrice": 55.00, "reviews": 4.9}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 9,
+      "name": "Nova Vase",
+      "desc": "A chic, modern design that’s perfect for brightening up any room.",
+      "currPrice": 42.00,
+      "prevPrice": 52.00,
+      "reviews": 4.5,
+      "img": "/assets/images/img-9.jpg",
+      "imgGallery": ["/assets/images/img-9.jpg", "/assets/images/img-10.jpg", "/assets/images/img-1.jpg"],
+      "material": "Ceramic",
+      "color": "Blue",
+      "size": "Medium",
+      "style": "Modern",
+      "shape": "Square",
+      "availability": "InStock",
+      "specifications": {
+          "Material": "Ceramic",
+          "Color": "Blue",
+          "Size": "Medium",
+          "Style": "Modern",
+          "Shape": "Square",
+          "Availability": "In Stock"
+      },
+      "customerReviews": [
+          {"name": "Ursula J.", "comment": "The perfect modern vase for my entryway.", "rating": 5},
+          {"name": "Vince W.", "comment": "Good value for the price.", "rating": 4},
+          {"name": "Wendy M.", "comment": "Matches my decor perfectly.", "rating": 5}
+      ],
+      "relatedProducts": [
+          {"id": 2, "name": "Zenith Vase", "img": "/assets/images/img-2.jpg", "currPrice": 39.99, "prevPrice": 49.99, "reviews": 4.6},
+          {"id": 5, "name": "Solstice Vase", "img": "/assets/images/img-5.jpg", "currPrice": 48.50, "prevPrice": 58.50, "reviews": 4.5},
+          {"id": 8, "name": "Cascade Vase", "img": "/assets/images/img-8.jpg", "currPrice": 46.50, "prevPrice": 56.50, "reviews": 4.8}
+      ],
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  },
+  {
+      "id": 10,
+      "name": "Serene Vase",
+      "desc": "A tranquil design with soft lines and a smooth finish, perfect for any serene space.",
+      "currPrice": 47.99,
+      "prevPrice": 57.99,
+      "reviews": 4.7,
+      "img": "/assets/images/img-10.jpg",
+      "imgGallery": ["/assets/images/img-10.jpg", "/assets/images/img-9.jpg", "/assets/images/img-8.jpg"],
+      "material": "Ceramic",
+      "color": "Beige",
+      "size": "Medium",
+      "style": "Contemporary",
+      "shape": "Oval",
+      "availability": "InStock",
+      "specifications": {
+          "Material": "Ceramic",
+          "Color": "Beige",
+          "Size": "Medium",
+          "Style": "Contemporary",
+          "Shape": "Oval",
+          "Availability": "In Stock"
+      },
+      "customerReviews": [
+          {"name": "Xander L.", "comment": "A beautiful addition to my minimalist home.", "rating": 5},
+          {"name": "Yara S.", "comment": "Lovely design and very well made.", "rating": 5},
+          {"name": "Zach T.", "comment": "Nice vase but a bit pricey.", "rating": 4},
+          {"name": "John D.", "comment": "Absolutely love the design and quality. Fits perfectly in my living room!", "rating": 4.3},
+          {"name": "Emily R.", "comment": "The minimalist style is just what I was looking for. Very pleased!", "rating": 5}
+      ],
+      "relatedProducts": [
+          {"id": 7, "name": "Nimbus Vase", "img": "/assets/images/img-7.jpg", "currPrice": 50.00, "prevPrice": 60.00, "reviews": 4.8},
+          {"id": 4, "name": "Luna Vase", "img": "/assets/images/img-4.jpg", "currPrice": 52.00, "prevPrice": 62.00, "reviews": 4.9},
+          {"id": 3, "name": "Aurora Vase", "img": "/assets/images/img-3.jpg", "currPrice": 45.00, "prevPrice": 55.00, "reviews": 4.6},
+          {"id": 3, "name": "Serene Vase", "img": "/assets/images/img-10.jpg", "currPrice": 45.00, "prevPrice": 55.00, "reviews": 4.6}
+      ],
+
+      "faqs": [
+      {"question": "Is this vase dishwasher safe?", "answer": "No, it's recommended to hand wash this vase."},
+      {"question": "Can it be used outdoors?", "answer": "Yes, it can be used outdoors but is not weatherproof."},
+      {"question": "What type of flowers fit best?", "answer": "Any medium-sized flowers or branches fit well."},
+      {"question": "Does it come in other colors?", "answer": "Currently, it's only available in white."},
+      {"question": "How heavy is the vase?", "answer": "It weighs approximately 1.5 kg."}
+    ]
+  }
+]

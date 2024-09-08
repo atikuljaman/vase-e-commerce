@@ -1,0 +1,218 @@
+.cart-wrapper {
+  position: fixed;
+  top: -100%;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ebf0ec;
+  box-shadow: -1px 0 4px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease-in;
+  z-index: 999;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.cart-wrapper.show-cart {
+  top: 0;
+}
+
+.cart-container .cart-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  /* border-bottom: 1px solid rgb(204, 204, 204, 0.5); */
+  padding-bottom: 20px;
+}
+
+.cart-container .cart-top h2 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.cart-container .cart-top button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 54px;
+}
+
+.cart-container .cart-center-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 50px;
+}
+
+.cart-container .cart-list-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(204, 204, 204, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+  overflow-y: auto;
+  height: calc(100vh - 250px);
+  scrollbar-width: thin;
+}
+
+.cart-container .cart-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  border-bottom: 1px solid rgb(204, 204, 204, 0.5);
+  padding-bottom: 30px;
+  background-color: #ebf0ec;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.cart-container .cart-list .remove-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: crimson;
+}
+
+.cart-container .cart-list .list-left {
+  width: 300px;
+  height: 280px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.cart-container .cart-list .list-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.cart-container .cart-list .list-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cart-container .cart-list .list-right .left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-container .cart-list .list-right h3 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.cart-container .cart-list .list-right p {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cart-container .cart-list .list-right .right-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: black;
+  width: fit-content;
+  border-radius: 999px;
+}
+
+.cart-container .cart-list .list-right .right-info button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.cart-container .cart-list .list-right .right-info span {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.cart-container .cart-summary-container {
+  height: calc(100vh - 250px);
+  padding: 40px;
+  border: 1px solid rgb(204, 204, 204, 0.5);
+  border-radius: 10px;
+  position: relative;
+}
+
+.cart-container .cart-summary-container h3 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cart-container .cart-summary-container .cart-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-container .cart-summary-container .cart-summary .divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(204, 204, 204, 0.5);
+}
+
+.cart-container .cart-summary-container .cart-summary p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cart-container .cart-summary-container .cart-summary button {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  width: 90%;
+  height: 60px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+
+.cart-container .cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 250px);
+}
+
+.cart-container .cart-empty p {
+  font-size: 34px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-container .cart-empty .cart-icon {
+  font-size: 60px;
+  opacity: 0.5;
+}
