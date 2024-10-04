@@ -47,3 +47,28 @@
   z-index: 2;
   opacity: 1;
 }
+
+/* MEDIA QUERY FOR RESPONSIVENESS */
+@media screen and (max-width: 1024px) {
+  .hero-container {
+    height: auto;
+    margin: 30px 0;
+  }
+
+  .hero-container .banner-img-wrapper {
+    width: 350px;
+    width: 280px;
+    height: 400px;
+    height: 300px;
+    border-radius: 20px;
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    display: none;
+  }
+
+  .hero-container h1 {
+    font-size: 13vw;
+    white-space: wrap;
+  }
+}

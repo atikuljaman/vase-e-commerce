@@ -1,40 +1,16 @@
-// import React, { createContext, useState, useContext } from "react";
-
-// // Create a context for the cart
-// const CartContext = createContext();
-
-// // Create a provider component
-// export const CartProvider = ({ children }) => {
-//   const [cartItems, setCartItems] = useState([]);
-
-//   // Add an item to the cart
-//   const addToCart = (product, quantity) => {
-//     setCartItems((prevItems) => [...prevItems, { ...product, quantity }]);
-//   };
-
-//   // Remove an item from the cart
-//   const removeFromCart = (id) => {
-//     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
-//   };
-
-//   return (
-//     <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
-//       {children}
-//     </CartContext.Provider>
-//   );
-// };
-
-// // Custom hook to use the CartContext
-// export const useCart = () => useContext(CartContext);
-
-// src/contexts/CartContext.jsx
-
 import React, { createContext, useState, useContext } from "react";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false); // State for cart modal visibility
+
+  // Function to toggle cart modal visibility
+  const toggleCart = () => {
+    setShowCart(!showCart);
+    console.log("showCart", showCart);
+  };
 
   // Add or update an item in the cart
   const addToCart = (product, quantity) => {
@@ -63,11 +39,19 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ addToCart, removeFromCart, getCartItems, cartItems }}
+      value={{
+        addToCart,
+        removeFromCart,
+        getCartItems,
+        cartItems,
+        showCart, // Expose showCart state
+        toggleCart, // Expose toggleCart function
+      }}
     >
       {children}
     </CartContext.Provider>
   );
 };
 
+// Hook to use the CartContext in components
 export const useCart = () => useContext(CartContext);

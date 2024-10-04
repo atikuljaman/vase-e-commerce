@@ -9,6 +9,10 @@ import {
   ShopPage,
   ProductDetailPage,
   AboutPage,
+  ContactPage,
+  CheckoutPage,
+  PaymentSuccessPage,
+  PaymentFailedPage,
 } from "./pages/index.js";
 import { CartProvider } from "./contexts/CartContext.jsx";
 
@@ -32,6 +36,22 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "/checkout", // Add the checkout route
+        element: <CheckoutPage />, // Render CheckoutPage here
+      },
+      {
+        path: "/payment-success", // Add the checkout route
+        element: <PaymentSuccessPage />, // Render CheckoutPage here
+      },
+      {
+        path: "/payment-failed", // Add the checkout route
+        element: <PaymentFailedPage />, // Render CheckoutPage here
       },
     ],
   },

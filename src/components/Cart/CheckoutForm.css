@@ -1,0 +1,40 @@
+.checkout-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  background-color: red;
+}
+
+.checkout-form h2 {
+  margin-bottom: 1.5rem;
+}
+
+.card-error {
+  color: red;
+  margin-top: 1rem;
+}
+
+.pay-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.pay-button:disabled {
+  background-color: #aaa;
+}
+
+.payment-success {
+  text-align: center;
+  margin-top: 2rem;
+}

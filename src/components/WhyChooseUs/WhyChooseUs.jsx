@@ -238,10 +238,12 @@ const WhyChooseUs = () => {
                   <h3>{item.title}</h3>
                 </div>
 
-                <FiPlus
-                  className={activeIndex === index ? "icon active" : "icon"}
-                  //   className="icon"
-                />
+                <div>
+                  <FiPlus
+                    className={activeIndex === index ? "icon active" : "icon"}
+                    //   className="icon"
+                  />
+                </div>
               </div>
 
               <div

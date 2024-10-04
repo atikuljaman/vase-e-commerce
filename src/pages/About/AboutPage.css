@@ -82,22 +82,165 @@
   gap: 60px;
 }
 
+.our-founder-wrapper {
+  background-color: black;
+  margin-top: 200px;
+}
+
 .our-founder-container {
   height: 100vh;
-  margin-top: 200px;
-  background-color: bisque;
+  /* margin-top: 200px; */
+  /* background-color: bisque; */
   position: relative;
+  margin-bottom: 80px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px;
+  /* background-color: black; */
+  color: white;
 }
 
 .our-founder-container .img-box {
-  width: 50%;
+  /* width: 50%; */
   height: 100%;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border-radius: 10px;
+  transform: translate(-50%, -50%); */
   overflow: hidden;
+  /* background-color: green; */
+}
+
+.our-founder-container .img-box::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  /* background-color: #ebf0ec; */
+  z-index: 1;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.our-founder-container .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.1));
+}
+
+.our-founder-container .heading {
+  font-size: 80px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.our-founder-container .detail-container {
+  width: 100%;
+  height: 100%;
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  /* display: grid;
+  grid-template-columns: 50%; */
+  gap: 50px;
+  padding-top: 200px;
+}
+
+.our-founder-container .detail-container h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.our-founder-container .detail-container p {
+  font-size: 24px;
+  font-weight: 600;
+  /* width: 30%; */
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.our-mission-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  height: calc(100vh - 88px);
+  gap: 30px;
+}
+
+/* MEDIA QUERY FOR RESPONSIVENESS */
+@media screen and (max-width: 767px) {
+  .our-story-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .our-story-left h2 {
+    font-size: 30px;
+  }
+
+  .our-story-left p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .our-story-right .img-box:nth-child(3),
+  .our-story-right .img-box:nth-child(4) {
+    display: none;
+  }
+
+  .our-philosophy-container {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: start;
+  }
+
+  .our-handcrafted-container {
+    margin-top: 50px;
+  }
+
+  .our-sustainability-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .our-founder-wrapper {
+    margin-top: 100px;
+  }
+
+  .our-founder-container {
+    height: auto;
+    margin-bottom: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .our-founder-container .img-box {
+    height: 400px;
+    overflow: hidden;
+    margin-top: 60px;
+    position: relative;
+  }
+
+  .our-founder-container .detail-container {
+    padding-top: 50px;
+  }
+
+  .our-founder-container .detail-container h2 {
+    font-size: 28px;
+  }
+
+  .our-founder-container .detail-container p {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+
+  .our-mission-container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+  }
 }

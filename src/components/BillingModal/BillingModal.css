@@ -1,0 +1,206 @@
+.billing-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.billing-modal .modal-header {
+  padding: 30px 30px 10px 30px;
+}
+
+.billing-modal .modal-content {
+  background-color: white;
+
+  border-radius: 10px;
+  width: 60%;
+  max-width: 650px;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.billing-modal .modal-body {
+  overflow: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.billing-modal .close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.billing-modal .modal-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  /* margin-bottom: 10px; */
+}
+
+.billing-modal .modal-header p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.billing-modal .input-group {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.billing-modal .input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.billing-modal .input-group label {
+  font-size: 16px;
+  font-weight: 600;
+  display: none;
+}
+
+.billing-modal .input-group input {
+  width: 100%;
+  max-width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  font-size: 16px;
+  outline: 0;
+}
+
+.billing-modal .input-group input:focus {
+  border: 1px solid black;
+}
+
+.billing-modal .input-group input::placeholder {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.billing-modal .btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 30px 30px 30px;
+}
+
+.billing-modal .btn-box button {
+  width: 100%;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.billing-modal .btn-box button:last-child {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+.billing-modal .error-text {
+  color: crimson;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 4px;
+}
+
+/* MEDIA QUERY FOR RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+  .billing-modal .modal-header {
+    padding: 30px 30px 10px 30px;
+  }
+
+  .billing-modal .modal-content {
+    background-color: white;
+
+    border-radius: 10px;
+
+    width: 90%;
+
+    max-width: 650px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+  }
+
+  .billing-modal .modal-body {
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .billing-modal .close-btn {
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .billing-modal .modal-header h2 {
+    font-size: 20px;
+  }
+
+  .billing-modal .input-group {
+    margin-top: 15px;
+    flex-direction: column;
+  }
+
+  .billing-modal .input-group input::placeholder {
+    font-size: 12px;
+  }
+
+  .billing-modal .btn-box {
+    flex-direction: column;
+  }
+
+  .billing-modal .btn-box button {
+    font-size: 14px;
+  }
+
+  .billing-modal .error-text {
+    margin-top: 0px;
+  }
+}

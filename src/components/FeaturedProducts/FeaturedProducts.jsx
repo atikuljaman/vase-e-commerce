@@ -6,6 +6,7 @@ import SplitType from "split-type";
 import featuredProductsData from "./featuredProductsData";
 import arrowIcon from "../../assets/images/arrow-icon.png";
 import "./FeaturedProducts.css";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -137,28 +138,30 @@ const FeaturedProducts = () => {
       <div className="container">
         <div className="products">
           {featuredProductsData.map((item) => (
-            <div className="card" key={item?.id}>
-              <div className="card-img">
-                <img src={item?.img} alt={item?.name} />
+            <Link to={`/product/${item.id}`}>
+              <div className="card" key={item?.id}>
+                <div className="card-img">
+                  <img src={item?.img} alt={item?.name} />
 
-                <div className="add-to-cart-box">
-                  <button>Add to cart</button>
-                </div>
-              </div>
-              <div className="product-info">
-                <div className="info-top">
-                  <h4>{item?.name}</h4>
-                  <div className="rating">
-                    <h4>{item?.reviews}</h4>
-                    <FaStar className="icon" />
+                  <div className="add-to-cart-box">
+                    <button>View Details</button>
                   </div>
                 </div>
-                <div className="price-box">
-                  <h4>{item?.currPrice}</h4>
-                  <h4 className="prev-price">{item?.prevPrice}</h4>
+                <div className="product-info">
+                  <div className="info-top">
+                    <h4>{item?.name}</h4>
+                    <div className="rating">
+                      <h4>{item?.reviews}</h4>
+                      <FaStar className="icon" />
+                    </div>
+                  </div>
+                  <div className="price-box">
+                    <h4>{item?.currPrice}</h4>
+                    <h4 className="prev-price">{item?.prevPrice}</h4>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

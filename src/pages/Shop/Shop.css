@@ -22,6 +22,28 @@
   font-size: 24px;
   font-weight: 600;
   border-bottom: 1px solid #ccc;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shop-container .filter-container h2 div small {
+  font-size: 16px;
+}
+
+.shop-container .filter-container h2 button {
+  border: none;
+  background-color: transparent;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.shop-container .filter-container h2 span {
+  display: none;
 }
 
 .shop-container .filter-container .filter-group {
@@ -82,17 +104,19 @@
 .filter-container input[type="checkbox"]:checked + label:after {
   content: "\2714";
   position: absolute;
+  /* left: 6px;
+  top: 1px; */
+
+  top: 0%;
   left: 6px;
-  top: 1px;
-  color: white;
-  font-size: 16px;
-  line-height: 22px;
+  /* transform: translate(0%, -50%); */
+
+  color: white !important;
+  font-size: 14px;
+  /* line-height: 22px; */
 }
 
 .shop-container .products-container {
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px; */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -125,6 +149,10 @@
   border-radius: 5px;
 }
 
+.pagination button span {
+  display: block;
+}
+
 .pagination button.prev,
 .pagination button.next {
   background-color: black;
@@ -141,4 +169,154 @@
 .pagination button.page-number.active {
   background-color: black;
   color: #fff;
+}
+
+.pagination button .icon {
+  display: none;
+}
+
+.shop-container .filter-sm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.shop-container .filter-sm-header button.clear-all-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  text-decoration: underline;
+}
+
+.shop-container .filter-toggle-btn {
+  display: none;
+}
+
+.shop-container .no-products {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  padding-top: 200px;
+}
+
+/* MEDIA QUERY FOR RESPONSIVENESS */
+@media screen and (max-width: 767px) {
+  .shop-container {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-container .filter-container {
+    border: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #ebf0ec;
+    z-index: 1000;
+    overflow-y: scroll;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .shop-container .filter-container.active {
+    left: 0;
+  }
+
+  .shop-container .filter-toggle-btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+  }
+
+  .shop-container .filter-toggle-btn span {
+    text-decoration: underline;
+  }
+
+  .shop-container .filter-toggle-btn .icon {
+    font-size: 25px;
+  }
+
+  .shop-container .filter-container h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .shop-container .filter-container h2 span {
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .shop-container .filter-container h2 button {
+    display: none;
+  }
+
+  .shop-container .filter-container .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .shop-container .filter-container .filter-group label {
+    font-size: 16px;
+  }
+
+  .shop-container .products-container {
+    padding: 0px;
+    border: none;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .shop-container .products-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pagination button {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .pagination button span {
+    display: none;
+  }
+
+  .pagination button .icon {
+    display: block;
+    font-size: 20px;
+  }
+
+  .shop-container .filter-sm-header {
+    display: flex;
+  }
+
+  .shop-container .no-products {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    padding: 50px 0 50px 0;
+  }
 }

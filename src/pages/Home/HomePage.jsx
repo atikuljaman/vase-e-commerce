@@ -15,7 +15,7 @@ const HomePage = () => {
       <HeroBanner />
       <FeaturedProducts />
       <WhyChooseUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CallToAction />
       <Footer />
     </div>

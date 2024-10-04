@@ -273,6 +273,9 @@
 
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
+import { LuSettings2 } from "react-icons/lu";
 import { Range } from "react-range";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../../components";
@@ -290,6 +293,8 @@ const ShopPage = () => {
   const [style, setStyle] = useState([]);
   const [shape, setShape] = useState([]);
   const [availability, setAvailability] = useState([]);
+
+  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     setProducts(productsData);
@@ -340,13 +345,69 @@ const ShopPage = () => {
     });
   };
 
+  const countAppliedFilters = () => {
+    let count = 0;
+    if (priceRange[0] > 20) count += 1;
+    if (material.length > 0) count += material.length;
+    if (color.length > 0) count += color.length;
+    if (size.length > 0) count += size.length;
+    if (style.length > 0) count += style.length;
+    if (shape.length > 0) count += shape.length;
+    if (availability.length > 0) count += availability.length;
+    return count;
+  };
+
+  // Clear All Filters function
+  const clearAllFilters = () => {
+    setPriceRange([20]);
+    setMaterial([]);
+    setColor([]);
+    setSize([]);
+    setStyle([]);
+    setShape([]);
+    setAvailability([]);
+  };
+
+  const handleToggleFilters = () => {
+    setShowFilters(!showFilters);
+  };
+
   return (
     <>
       <Navbar />
 
       <div className="shop-container container">
-        <div className="filter-container">
-          <h2>Filters</h2>
+        <div className="filter-sm-header">
+          <button className="filter-toggle-btn" onClick={handleToggleFilters}>
+            <span>
+              Filters <small>( {countAppliedFilters()} )</small>{" "}
+            </span>
+            <LuSettings2 className="icon" />
+          </button>
+
+          {/* Clear All button */}
+          {countAppliedFilters() > 0 && (
+            <button className="clear-all-btn" onClick={clearAllFilters}>
+              Clear All
+            </button>
+          )}
+        </div>
+
+        <div className={`filter-container ${showFilters ? "active" : ""}`}>
+          <h2>
+            <div>
+              Filters <small>( {countAppliedFilters()} )</small>
+            </div>
+            <span onClick={handleToggleFilters}>
+              <IoClose />
+            </span>{" "}
+            {/* Clear All button */}
+            {countAppliedFilters() > 0 && (
+              <button className="clear-all-btn" onClick={clearAllFilters}>
+                Clear All
+              </button>
+            )}
+          </h2>
 
           {/* Price Range Filter */}
           <div className="filter-group">
@@ -404,6 +465,7 @@ const ShopPage = () => {
                     type="checkbox"
                     id={item}
                     onChange={() => handleCheckboxChange(setMaterial, item)}
+                    checked={material.includes(item)}
                   />
                   <label htmlFor={item}>{item}</label>
                 </div>
@@ -427,6 +489,7 @@ const ShopPage = () => {
                   type="checkbox"
                   id={item}
                   onChange={() => handleCheckboxChange(setColor, item)}
+                  checked={color.includes(item)}
                 />
                 <label htmlFor={item}>{item}</label>
               </div>
@@ -442,6 +505,7 @@ const ShopPage = () => {
                   type="checkbox"
                   id={item}
                   onChange={() => handleCheckboxChange(setSize, item)}
+                  checked={size.includes(item)}
                 />
                 <label htmlFor={item}>{item}</label>
               </div>
@@ -458,6 +522,7 @@ const ShopPage = () => {
                     type="checkbox"
                     id={item}
                     onChange={() => handleCheckboxChange(setStyle, item)}
+                    checked={style.includes(item)}
                   />
                   <label htmlFor={item}>{item}</label>
                 </div>
@@ -480,6 +545,7 @@ const ShopPage = () => {
                   type="checkbox"
                   id={item}
                   onChange={() => handleCheckboxChange(setShape, item)}
+                  checked={shape.includes(item)}
                 />
                 <label htmlFor={item}>{item}</label>
               </div>
@@ -495,6 +561,7 @@ const ShopPage = () => {
                   type="checkbox"
                   id={item}
                   onChange={() => handleCheckboxChange(setAvailability, item)}
+                  checked={availability.includes(item)}
                 />
                 <label htmlFor={item}>{item}</label>
               </div>
@@ -503,43 +570,55 @@ const ShopPage = () => {
         </div>
 
         <div className="products-container">
-          <div className="products-card-container">
-            {filteredProducts.map((item) => (
-              <Link to={`/product/${item.id}`}>
-                <div className="card" key={item?.id}>
-                  <div className="card-img">
-                    <img src={`../../${item?.img}`} alt={item?.name} />
-                    <div className="add-to-cart-box">
-                      <button>Add to cart</button>
-                    </div>
-                  </div>
-                  <div className="product-info">
-                    <div className="info-top">
-                      <h4>{item?.name}</h4>
-                      <div className="rating">
-                        <h4>{item?.reviews}</h4> <FaStar className="icon" />
+          {filteredProducts.length === 0 ? (
+            <h2 className="no-products">No Products Found :(</h2>
+          ) : (
+            <>
+              <div className="products-card-container">
+                {filteredProducts.map((item) => (
+                  <Link to={`/product/${item.id}`}>
+                    <div className="card" key={item?.id}>
+                      <div className="card-img">
+                        <img src={`../../${item?.img}`} alt={item?.name} />
+                        <div className="add-to-cart-box">
+                          <button>View Details</button>
+                        </div>
+                      </div>
+                      <div className="product-info">
+                        <div className="info-top">
+                          <h4>{item?.name}</h4>
+                          <div className="rating">
+                            <h4>{item?.reviews}</h4> <FaStar className="icon" />
+                          </div>
+                        </div>
+                        <div className="price-box">
+                          <h4>${item?.currPrice}</h4>
+                          <h4 className="prev-price">${item?.prevPrice}</h4>
+                        </div>
                       </div>
                     </div>
-                    <div className="price-box">
-                      <h4>${item?.currPrice}</h4>
-                      <h4 className="prev-price">${item?.prevPrice}</h4>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+                  </Link>
+                ))}
+              </div>
 
-          {/* Pagination Controls */}
-          <div className="pagination">
-            <button className="prev">Previous</button>
-            {[1, 2, 3, 4, 5].map((page) => (
-              <button key={page} className="page-number">
-                {page}
-              </button>
-            ))}
-            <button className="next">Next</button>
-          </div>
+              {/* Pagination Controls */}
+              <div className="pagination">
+                <button className="prev">
+                  <span>Previous</span>
+                  <IoIosArrowBack className="icon" />
+                </button>
+                {[1, 2, 3, 4, 5].map((page) => (
+                  <button key={page} className="page-number">
+                    {page}
+                  </button>
+                ))}
+                <button className="next">
+                  <span>Next</span>
+                  <IoIosArrowForward className="icon" />
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
 

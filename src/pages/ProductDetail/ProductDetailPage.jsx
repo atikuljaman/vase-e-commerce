@@ -7,6 +7,7 @@ import Rating from "react-rating";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { useCart } from "../../contexts/CartContext.jsx";
+import Swal from "sweetalert2";
 import gsap from "gsap";
 
 const ProductDetailPage = () => {
@@ -77,7 +78,13 @@ const ProductDetailPage = () => {
   const handleAddToCart = () => {
     if (product) {
       addToCart(product, quantity);
-      alert("Product added to cart!");
+      // alert("Product added to cart!");
+
+      Swal.fire({
+        title: "Added",
+        text: "Product added to cart!",
+        icon: "success",
+      });
     }
   };
 
@@ -302,11 +309,13 @@ const ProductDetailPage = () => {
                           <h3>{faq.question}</h3>
                         </div>
 
-                        <FiPlus
-                          className={
-                            activeIndex === index ? "icon active" : "icon"
-                          }
-                        />
+                        <div>
+                          <FiPlus
+                            className={
+                              activeIndex === index ? "icon active" : "icon"
+                            }
+                          />
+                        </div>
                       </div>
 
                       <div
